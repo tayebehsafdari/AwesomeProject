@@ -19,5 +19,19 @@ export const styles = StyleSheet.create({
         shadowColor: 'black',
         shadowOffset: {width: 0, height: 2},
         shadowOpacity: .1
-    }
+    },
+    loginTitle: {
+        fontSize: 18,
+        margin: 2,
+        paddingTop: 10,
+        paddingBottom: 10,
+        textAlign: 'center'
+    },
+    inputGroups: {
+        margin: 2,
+        marginLeft: 20,
+        marginRight: 20
+    },
+    labelText: {},
+    inputText: {},
 });
