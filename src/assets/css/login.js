@@ -1,11 +1,16 @@
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
-    text: {
-        fontSize: 48,
-        color: 'red',
-        borderWidth: 4,
-        borderColor: 'blue',
-        borderStyle: 'solid'
+    container: {
+        backgroundColor: '#2980b9',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row'
+    },
+    loginBox: {
+        backgroundColor: 'white',
+        height: 150,
+        width: 150
     }
 });
