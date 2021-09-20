@@ -11,14 +11,14 @@ export const styles = StyleSheet.create({
     loginBox: {
         backgroundColor: 'white',
         flex: 1,
-        height: 200,
         marginRight: 50,
         marginLeft: 50,
         borderRadius: 5,
         elevation: 2,
         shadowColor: 'black',
         shadowOffset: {width: 0, height: 2},
-        shadowOpacity: .1
+        shadowOpacity: .1,
+        paddingBottom: 20
     },
     loginTitle: {
         fontSize: 18,
@@ -32,6 +32,27 @@ export const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20
     },
-    labelText: {},
-    inputText: {},
+    labelText: {
+        textAlign: 'right',
+        marginBottom: 10,
+        color: '#5256c9',
+        fontWeight: 'bold'
+    },
+    inputText: {
+        textAlign: 'right',
+        borderColor: 'rgba(0, 0, 0, .1)',
+        borderWidth: 1,
+        padding: 10,
+        borderRadius: 3,
+        height: 40
+    },
+    loginButton: {
+        backgroundColor: '#426bd7',
+        color: 'white',
+        marginTop: 15,
+        marginRight: 25,
+        marginLeft: 25,
+        textAlign: 'center'
+    },
+    forgetPassword: {}
 });
