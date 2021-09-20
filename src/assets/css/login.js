@@ -52,7 +52,17 @@ export const styles = StyleSheet.create({
         marginTop: 15,
         marginRight: 25,
         marginLeft: 25,
-        textAlign: 'center'
+        textAlign: 'center',
+        padding: 10,
+        borderRadius: 20,
+        elevation: 2,
+        shadowColor: 'black',
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: .1,
+        overflow: 'hidden'
     },
-    forgetPassword: {}
+    forgetPassword: {
+        textAlign: 'center',
+        marginTop: 15
+    }
 });
