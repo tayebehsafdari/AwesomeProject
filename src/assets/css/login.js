@@ -10,7 +10,14 @@ export const styles = StyleSheet.create({
     },
     loginBox: {
         backgroundColor: 'white',
-        height: 150,
-        width: 150
+        flex: 1,
+        height: 200,
+        marginRight: 50,
+        marginLeft: 50,
+        borderRadius: 5,
+        elevation: 2,
+        shadowColor: 'black',
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: .1
     }
 });

@@ -5,7 +5,9 @@ import {styles} from './../assets/css/login';
 
 const Login = () => {
     return <View style={styles.container}>
-        <View style={styles.loginBox}></View>
+        <View style={styles.loginBox}>
+            
+        </View>
     </View>;
 }
 
