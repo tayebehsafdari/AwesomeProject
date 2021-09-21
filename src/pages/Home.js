@@ -4,7 +4,7 @@ import {View} from 'react-native';
 import Articles from "../components/Articles";
 // import Login from "../components/Login";
 
-const Home: ()  =>Node = () => {
+const Home: (props)  =>Node = () => {
     const [articles, setArticles] = useState([]);
     useEffect(() => {
         setArticles([
@@ -38,7 +38,7 @@ const Home: ()  =>Node = () => {
     return (
         <View>
             {/*<Login/>*/}
-            <Articles articles={articles}/>
+            <Articles articles={articles} navigation={props.navigation}/>
         </View>
     );
 }

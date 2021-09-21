@@ -32,7 +32,9 @@ const Articles = (props): Node => {
         return <Article
             title={article.title}
             imageUrl={article.imageUrl}
-            body={article.body}/>;
+            body={article.body}
+            navigation={props.navigation}
+        />;
     }
     return (
         <View style={{flex: 1}}>

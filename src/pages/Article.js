@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 const Article = (props): Node => {
-    const {title, imageUrl, body} = props;
+    const {title, imageUrl, body} = props.navigation.state.params.article;
     return (
         <ScrollView>
             <Image source={imageUrl} style={styles.image}/>
@@ -18,12 +18,18 @@ const Article = (props): Node => {
                 <Text style={styles.title}>{title}</Text>
                 <Text
                     style={styles.body}
-                    numberOfLines={5}
-                >{body}</Text>
+                    // numberOfLines={5}
+                >
+                    {body}
+                </Text>
             </View>
         </ScrollView>
     );
 }
+
+Article.navigationOptions = ({navigation}) => ({
+    title: navigation.state.params.article.title
+});
 
 const styles = StyleSheet.create({
     image: {

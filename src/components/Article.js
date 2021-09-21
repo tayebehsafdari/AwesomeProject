@@ -6,22 +6,32 @@ import {
     Text,
     StyleSheet,
     Platform,
-    Dimensions
+    Dimensions,
+    TouchableNativeFeedback
 } from 'react-native';
 
 const Article = (props): Node => {
     const {title, imageUrl, body} = props;
+    const {navigate} = props.navigation;
     return (
-        <View style={styles.container}>
-            <Image source={imageUrl} style={styles.image}/>
-            <View style={{padding: 10}}>
-                <Text style={styles.title}>{title}</Text>
-                <Text
-                    style={styles.body}
-                    numberOfLines={5}
-                >{body}</Text>
+        <TouchableNativeFeedback onPress={() => navigate('Article', {
+            article: {
+                title,
+                imageUrl,
+                body
+            }
+        })}>
+            <View style={styles.container}>
+                <Image source={imageUrl} style={styles.image}/>
+                <View style={{padding: 10}}>
+                    <Text style={styles.title}>{title}</Text>
+                    <Text
+                        style={styles.body}
+                        numberOfLines={5}
+                    >{body}</Text>
+                </View>
             </View>
-        </View>
+        </TouchableNativeFeedback>
     );
 }
 const {width, height} = Dimensions.get('window');
