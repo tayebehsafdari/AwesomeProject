@@ -24,23 +24,28 @@ const Article = (props): Node => {
         </View>
     );
 }
+const {width, height} = Dimensions.get('window');
+const gutter = 10;
 
 const styles = StyleSheet.create({
     container: {
+        // width: (width - gutter * 3) / 2,
+        flex: .5,
+        margin: 5,
         backgroundColor: 'white',
         elevation: 1,
         shadowColor: '#000',
         shadowOffset: {width: 0, height: 20},
         shadowOpacity: .2,
-        marginBottom: 10
+        // marginBottom: 10
     },
     image: {
         width: '100%',
-        height: 200
+        height: 120
     },
     title: {
         textAlign: 'right',
-        fontSize: 18,
+        fontSize: 16,
         ...Platform.select({
             ios: {
                 fontFamily: 'IRANSansMobile',
@@ -52,11 +57,12 @@ const styles = StyleSheet.create({
             default: {
                 fontFamily: 'IRANSansMobile_Bold'
             }
-        }),
+        })
     },
     body: {
         textAlign: 'right',
-        fontFamily: 'IRANSansMobile'
+        fontFamily: 'IRANSansMobile',
+        fontSize: 12
     }
 });
 
