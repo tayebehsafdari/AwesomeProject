@@ -30,7 +30,10 @@ const Article = (props): Node => {
 
 Article.navigationOptions = ({navigation}) => ({
     // title: navigation.state.params.article.title
-    headerTitle: <Text style={OriginalStyle.headerTitleStyle}>{navigation.state.params.article.title}</Text>
+    headerTitle: <Text style={OriginalStyle.headerTitleStyle}>{navigation.state.params.article.title}</Text>,
+    headerStyle: {
+        backgroundColor: 'red'
+    }
 });
 
 const styles = StyleSheet.create({

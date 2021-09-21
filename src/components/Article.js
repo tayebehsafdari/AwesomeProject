@@ -7,14 +7,14 @@ import {
     StyleSheet,
     Platform,
     Dimensions,
-    TouchableNativeFeedback
+    TouchableWithoutFeedback
 } from 'react-native';
 
 const Article = (props): Node => {
     const {title, imageUrl, body} = props;
     const {navigate} = props.navigation;
     return (
-        <TouchableNativeFeedback onPress={() => navigate('Article', {
+        <TouchableWithoutFeedback onPress={() => navigate('Article', {
             article: {
                 title,
                 imageUrl,
@@ -31,7 +31,7 @@ const Article = (props): Node => {
                     >{body}</Text>
                 </View>
             </View>
-        </TouchableNativeFeedback>
+        </TouchableWithoutFeedback>
     );
 }
 const {width, height} = Dimensions.get('window');
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
         ...Platform.select({
             ios: {
                 fontFamily: 'IRANSansMobile',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                textAlign: 'left'
             },
             android: {
                 fontFamily: 'IRANSansMobile_Bold'
