@@ -8,6 +8,7 @@ import {
     Platform,
     ScrollView
 } from 'react-native';
+import OriginalStyle from './../assets/css';
 
 const Article = (props): Node => {
     const {title, imageUrl, body} = props.navigation.state.params.article;
@@ -28,7 +29,8 @@ const Article = (props): Node => {
 }
 
 Article.navigationOptions = ({navigation}) => ({
-    title: navigation.state.params.article.title
+    // title: navigation.state.params.article.title
+    headerTitle: <Text style={OriginalStyle.headerTitleStyle}>{navigation.state.params.article.title}</Text>
 });
 
 const styles = StyleSheet.create({
