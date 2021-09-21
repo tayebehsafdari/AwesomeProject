@@ -11,7 +11,7 @@ import {
 import {styles} from './../assets/css/login';
 import LinearGradient from "react-native-linear-gradient";
 
-const Login = () => {
+const Login = (): Node => {
     const [colorLoginButtonHText, setColorLoginButtonHText] = useState({
         color: 'white'
     });
