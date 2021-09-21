@@ -83,5 +83,23 @@ export const styles = StyleSheet.create({
         fontFamily: 'IRANSansMobile',
         textAlign: 'center',
         marginTop: 10
-    }
+    },
+    loginButtonH: {
+        backgroundColor: '#426bd7',
+        marginTop: 15,
+        marginRight: 25,
+        marginLeft: 25,
+        padding: 10,
+        borderRadius: 20,
+        elevation: 2,
+        shadowColor: 'black',
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: .1,
+        overflow: 'hidden'
+    },
+    loginButtonHText: {
+        fontFamily: 'IRANSansMobile',
+        // color: 'white',
+        textAlign: 'center'
+    },
 });
