@@ -5,7 +5,8 @@ import {
     Image,
     Text,
     StyleSheet,
-    Platform
+    Platform,
+    Dimensions
 } from 'react-native';
 
 const Article = (props): Node => {

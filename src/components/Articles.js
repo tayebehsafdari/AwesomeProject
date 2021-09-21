@@ -1,6 +1,10 @@
 import React from 'react';
 import type {Node} from 'react';
-import {ScrollView} from 'react-native';
+import {
+    ScrollView,
+    ListView,
+    StyleSheet
+} from 'react-native';
 
 import Article from "./Article";
 
@@ -14,11 +18,15 @@ const Articles = (props): Node => {
             body={article.body}/>);
     };
     return (
-        <ScrollView>
+        <ScrollView contentContainerStyle={styles.container}>
             {_renderArticles(articles)}
         </ScrollView>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {}
+});
 
 export default Articles;
 
