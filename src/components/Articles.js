@@ -8,7 +8,7 @@ import {
     TouchableHighlight,
     TouchableNativeFeedback
 } from 'react-native';
-import {styles} from './../assets/css/login';
+
 import Article from "./Article";
 
 const Articles = (): Node => {
@@ -16,35 +16,35 @@ const Articles = (): Node => {
     useEffect(() => {
         setArticles([
             {
-                title: 'React',
-                imageUrl: './../assets/images/React.png',
-                body: 'React is a free and open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.'
+                title: 'آموزش React',
+                imageUrl: {uri: './../assets/images/React.png'},
+                body: 'React یک کتابخانه جاوا اسکریپت رایگان و منبع باز برای ایجاد واسط کاربر یا اجزای UI است. این توسط فیس بوک و جامعه ای از توسعه دهندگان و شرکت های جداگانه نگهداری می شود. React می تواند به عنوان پایه ای در توسعه برنامه های تک صفحه ای یا تلفن همراه استفاده شود.'
             },
             {
-                title: 'Redux',
-                imageUrl: './../assets/images/Redux.png',
-                body: 'Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Similar to Facebook\'s Flux architecture, it was created by Dan Abramov and Andrew Clark.'
+                title: 'آموزش Redux',
+                imageUrl: {uri: './../assets/images/Redux.png'},
+                body: 'Redux یک کتابخانه جاوا اسکریپت منبع باز برای مدیریت و متمرکز کردن حالت برنامه است. بیشتر برای کتابخانه هایی مانند React یا Angular برای ایجاد رابط کاربری استفاده می شود. مشابه معماری Flux فیس بوک ، توسط Dan Abramov و Andrew Clark ایجاد شد.'
             },
             {
-                title: 'Next.js',
-                imageUrl: './../assets/images/NextJs.png',
-                body: 'Next.js is an open-source development framework built on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites.'
+                title: 'آموزش Next.js',
+                imageUrl: {uri: './../assets/images/NextJs.png'},
+                body: 'Next.js یک چارچوب توسعه منبع باز است که در بالای Node.js ساخته شده است و قابلیت های برنامه های کاربردی تحت وب React مانند رندر سمت سرور و ایجاد وب سایت های ایستا را قادر می سازد.'
             },
             {
-                title: 'React Native',
-                imageUrl: './../assets/images/ReactNative.png',
-                body: 'React Native is an open-source UI software framework created by Facebook, Inc. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows and UWP by enabling developers to use the React framework along with native platform capabilities.'
+                title: 'آموزش React Native',
+                imageUrl: {uri: './../assets/images/ReactNative.png'},
+                body: 'React Native یک چارچوب نرم افزاری UI منبع باز است که توسط Facebook ، Inc ایجاد شده است. این برنامه برای توسعه برنامه های کاربردی برای Android ، Android TV ، iOS ، macOS ، tvOS ، Web ، Windows و UWP استفاده می شود و توسعه دهندگان می توانند از چارچوب React در کنار بومی استفاده کنند. قابلیت های پلتفرم'
             },
             {
-                title: 'Progressive Web Apps',
-                imageUrl: './../assets/images/ProgressiveWebApps.png',
-                body: 'A progressive web application is a type of application software delivered through the web, built using common web technologies including HTML, CSS and JavaScript. It is intended to work on any platform that uses a standards-compliant browser, including both desktop and mobile devices.'
+                title: 'آموزش Progressive Web Apps',
+                imageUrl: {uri: './../assets/images/ProgressiveWebApps.png'},
+                body: 'یک برنامه کاربردی تحت وب نوعی نرم افزار کاربردی است که از طریق وب ارائه می شود و با استفاده از فن آوری های رایج وب از جمله HTML ، CSS و JavaScript ساخته شده است. این برنامه برای کار بر روی هر پلتفرمی که از مرورگرهای سازگار با استانداردها ، از جمله دستگاه های رومیزی و تلفن همراه استفاده می کند ، در نظر گرفته شده است.'
             },
         ]);
     }, []);
 
     return (
-        <Article/>
+        <Article title={articles[0].title} imageUrl={articles[0].imageUrl} body={articles[0].body}/>
     );
 }
 

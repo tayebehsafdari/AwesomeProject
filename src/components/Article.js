@@ -1,24 +1,56 @@
-import React, {useState} from 'react';
+import React from 'react';
 import type {Node} from 'react';
 import {
     View,
+    Image,
     Text,
-    TextInput,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback
+    StyleSheet, Platform
 } from 'react-native';
-import {styles} from './../assets/css/login';
 
-const Article = (): Node => {
-    const [colorLoginButtonHText, setColorLoginButtonHText] = useState({
-        color: 'white'
-    });
-
+const Article = (props): Node => {
+    const {title, imageUrl, body} = props;
     return (
-        <Text>f</Text>
+        <View style={styles.container}>
+            <Image source={imageUrl} style={styles.image}/>
+            <View>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.body}>{body}</Text>
+            </View>
+        </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: 'white',
+        elevation: 1,
+        shadowColor: '#000',
+        shadowOffset: {width: 0, height: 20},
+        shadowOpacity: .2
+    },
+    image: {
+        width: '100%',
+        height: 200
+    },
+    title: {
+        textAlign: 'right',
+        ...Platform.select({
+            ios: {
+                fontFamily: 'IRANSansMobile',
+                fontWeight: '500'
+            },
+            android: {
+                fontFamily: 'IRANSansMobile_Medium'
+            },
+            default: {
+                fontFamily: 'IRANSansMobile_Medium'
+            }
+        }),
+    },
+    body: {
+        textAlign: 'right'
+    }
+});
 
 export default Article;
 
