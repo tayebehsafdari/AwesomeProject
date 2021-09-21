@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 import Article from "./Article";
-import Header from "./Header";
+// import Header from "./Header";
 
 const Articles = (props): Node => {
     const {articles} = props;
@@ -28,7 +28,7 @@ const Articles = (props): Node => {
             {_renderArticles(articles)}
         </ScrollView>
     ); */
-    /* const _renderFlatListArticle = article => {
+    const _renderFlatListArticle = article => {
         return <Article
             title={article.title}
             imageUrl={article.imageUrl}
@@ -41,13 +41,13 @@ const Articles = (props): Node => {
                 data={articles}
                 renderItem={({item}) => _renderFlatListArticle(item)}
                 keyExtractor={(item, index) => index}
-                ListHeaderComponent={() => <Header/>}
+                // ListHeaderComponent={() => <Header/>}
                 numColumns:{2}
                 columnWrapperStyle:{{flexDirection: 'row-reverse'}}
             />
         </View>
-    ); */
-    const data = [
+    );
+    /* const data = [
         {data: ['سپیده', 'سحر'], key: 'س'},
         {data: ['گلبری', 'گلی', 'گلنوش'], key: 'گ'},
         {data: ['بهرخ', 'بهناز', 'بهارا'], key: 'ب'},
@@ -60,7 +60,7 @@ const Articles = (props): Node => {
             renderSectionHeader={({section}) => <Text
                 style={{fontSize: 18, padding: 10, color: 'red'}}>{section.key}</Text>}
         />
-    );
+    ); */
 }
 
 /* const styles = StyleSheet.create({
