@@ -18,7 +18,7 @@ const App: ()  =>Node = () => {
                     name="Home"
                     component={Home}
                     // options:{{title: 'مجله آموزشی طیبه صفدری دوست'}}
-                    options:{{
+                    options={{
                     headerTitle: <Text style={OriginalStyle.headerTitleStyle}>مجله آموزشی طیبه صفدری دوست</Text>
                 }}
                 />
